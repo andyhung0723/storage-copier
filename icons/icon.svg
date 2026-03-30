@@ -1,4 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="20" fill="#4F46E5"/>
-  <text x="64" y="78" font-family="Arial,sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle">SC</text>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#818cf8"/>
+      <stop offset="100%" style="stop-color:#4f46e5"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="128" height="128" rx="26" fill="url(#bg)"/>
+  <!-- Clipboard back (source) -->
+  <rect x="22" y="28" width="44" height="54" rx="7" fill="white" opacity="0.3"/>
+  <!-- Clipboard front (target) -->
+  <rect x="50" y="40" width="44" height="54" rx="7" fill="white" opacity="0.92"/>
+  <!-- Clip -->
+  <rect x="62" y="34" width="20" height="10" rx="4" fill="#3730a3"/>
+  <!-- Data lines -->
+  <rect x="58" y="56" width="22" height="3" rx="1.5" fill="#6366f1" opacity="0.6"/>
+  <rect x="58" y="63" width="30" height="3" rx="1.5" fill="#6366f1" opacity="0.35"/>
+  <rect x="58" y="70" width="16" height="3" rx="1.5" fill="#6366f1" opacity="0.6"/>
+  <rect x="58" y="77" width="26" height="3" rx="1.5" fill="#6366f1" opacity="0.35"/>
+  <!-- Arrow: copy-paste motion -->
+  <path d="M36 94 C36 104, 80 108, 96 96" stroke="white" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0.9"/>
+  <polygon points="99,99 96,90 90,97" fill="white" opacity="0.9"/>
 </svg>
