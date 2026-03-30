@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1>Storage Copier</h1>
+      <p class="domain" id="currentDomain">—</p>
+    </header>
+
+    <!-- Paste Section (shown when clipboard has data) -->
+    <section class="paste-section hidden" id="pasteSection">
+      <div class="paste-info">
+        <span class="paste-badge">剪貼簿</span>
+        <span id="clipboardSource">—</span>
+        <span class="paste-count" id="clipboardCount"></span>
+      </div>
+      <div class="paste-types" id="clipboardTypes"></div>
+      <div class="paste-actions">
+        <button class="btn btn-primary" id="pasteBtn">貼上到此網站</button>
+        <button class="btn btn-ghost" id="clearClipboardBtn">清除</button>
+      </div>
+    </section>
+
+    <hr class="divider hidden" id="pasteDivider">
+
+    <!-- Copy Section -->
+    <section class="copy-section">
+      <div class="type-selector">
+        <label class="chip">
+          <input type="checkbox" value="sessionStorage"> sessionStorage
+        </label>
+        <label class="chip">
+          <input type="checkbox" value="localStorage"> localStorage
+        </label>
+        <label class="chip">
+          <input type="checkbox" value="cookies"> Cookies
+        </label>
+      </div>
+      <button class="btn btn-secondary" id="readBtn">讀取</button>
+    </section>
+
+    <!-- Entry List -->
+    <section class="entries-section hidden" id="entriesSection">
+      <div class="entries-header">
+        <label class="select-all">
+          <input type="checkbox" id="selectAll"> 全選
+        </label>
+        <span class="entry-count" id="entryCount">0 筆</span>
+      </div>
+      <div class="entries-list" id="entriesList"></div>
+      <button class="btn btn-primary" id="copyBtn">複製選取項目</button>
+    </section>
+
+    <!-- Toast -->
+    <div class="toast hidden" id="toast"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
