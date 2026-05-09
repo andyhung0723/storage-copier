@@ -28,6 +28,24 @@
 
     <hr class="divider hidden" id="pasteDivider">
 
+    <!-- Memories Section -->
+    <section class="memories-section" id="memoriesSection">
+      <div class="section-header">
+        <h2>記憶</h2>
+        <span class="entry-count" id="memoryCount">0 筆</span>
+      </div>
+      <select class="memory-select" id="memorySelect"></select>
+      <div class="memory-details" id="memoryDetails">
+        <div class="memory-meta" id="memorySelectedMeta"></div>
+        <div class="memory-types" id="memorySelectedTypes"></div>
+      </div>
+      <div class="memory-actions">
+        <button class="btn btn-primary btn-small" id="applyMemoryBtn">套用</button>
+        <button class="btn btn-secondary btn-small" id="copyMemoryBtn">剪貼簿</button>
+        <button class="btn btn-ghost btn-small" id="deleteMemoryBtn">刪除</button>
+      </div>
+    </section>
+
     <!-- Copy Section -->
     <section class="copy-section">
       <div class="type-selector">
@@ -53,7 +71,18 @@
         <span class="entry-count" id="entryCount">0 筆</span>
       </div>
       <div class="entries-list" id="entriesList"></div>
-      <button class="btn btn-primary" id="copyBtn">複製選取項目</button>
+      <div class="entry-actions">
+        <button class="btn btn-primary" id="copyBtn">複製選取項目</button>
+        <div class="memory-save">
+          <input
+            type="text"
+            id="memoryName"
+            placeholder="記憶名稱（可留空）"
+            maxlength="80"
+          >
+          <button class="btn btn-secondary" id="saveMemoryBtn">儲存記憶</button>
+        </div>
+      </div>
     </section>
 
     <!-- Toast -->

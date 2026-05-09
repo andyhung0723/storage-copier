@@ -90,6 +90,76 @@ body {
   border-top: 1px solid #e2e8f0;
 }
 
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-header h2 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.memories-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.memory-select {
+  width: 100%;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 12px;
+}
+
+.memory-select:disabled {
+  color: #94a3b8;
+  background: #f8fafc;
+}
+
+.memory-select:focus {
+  outline: 2px solid #c7d2fe;
+  border-color: #818cf8;
+}
+
+.memory-details {
+  padding: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.memory-details.is-empty {
+  background: #f8fafc;
+}
+
+.memory-meta {
+  font-size: 11px;
+  color: #64748b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.memory-types {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.memory-actions {
+  display: flex;
+  gap: 8px;
+}
+
 /* Type Selector */
 .type-selector {
   display: flex;
@@ -140,6 +210,13 @@ body {
   cursor: pointer;
   border: none;
   transition: all 0.15s;
+}
+
+.btn-small {
+  padding: 5px 8px;
+  font-size: 11px;
+  line-height: 1;
+  flex: none;
 }
 
 .btn:disabled {
@@ -215,6 +292,33 @@ body {
   gap: 2px;
   border: 1px solid #e2e8f0;
   border-radius: 6px;
+}
+
+.entry-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.memory-save {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+}
+
+.memory-save input {
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #1e293b;
+  background: #ffffff;
+}
+
+.memory-save input:focus {
+  outline: 2px solid #c7d2fe;
+  border-color: #818cf8;
 }
 
 .entry-group-label {
